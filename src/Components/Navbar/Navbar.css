@@ -1,0 +1,104 @@
+
+/* Navbar.css */
+#navbarmain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form-inline {
+    margin-left: auto;
+  }
+  
+
+  /* Navbar.css */
+#navbarmain {
+    display: flex;
+    align-items: center;
+  }
+  
+
+  .navbar-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form-inline {
+    margin-left: auto;
+  }
+  
+
+  #navbarmain{
+    background-color: rgb(0, 0, 0);
+    height: 60px;
+    width: 100%;
+    margin-top: -8px;
+    text-align: center;
+  }
+
+  #databasename{
+    color: rgb(0, 64, 255);
+    font-family: sans-serif;
+    padding-right: 200px;
+    margin-left: 5%;
+    font-weight: 800px;
+    font-size: 30px;
+  }
+
+  #databasename:hover {
+    color: rgb(255, 255, 255);
+}
+
+  #navlinkitems {
+   padding-right: 180px;
+   font-size: 100%;
+   color: #f74343;
+  }
+
+  #itemss{
+    color: #f74343;
+    margin-right: 4px;
+  }
+  #itemss:hover{
+    color: rgb(255, 255, 255);
+  }
+
+
+/* Navbar.css */
+
+/* Style for the fixed Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #f8f9fa; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  /* Ensure content starts below the fixed Navbar */
+  body {
+    padding-top: 70px; /* Adjust this value to match the height of your Navbar */
+  }
+  
+  /* Optional: Adjust Navbar Brand styles */
+  .navbar-brand {
+    margin-left: 15px; /* Example: Add margin to Navbar Brand */
+    font-size: 1.5rem; /* Example: Increase font size */
+  }
+  
+  /* Optional: Style for Nav Links */
+  .navbar-nav .nav-link {
+    color: white; /* Example: Set text color */
+    margin-right: 20px; /* Example: Add spacing between Nav Links */
+  }
+  
+
