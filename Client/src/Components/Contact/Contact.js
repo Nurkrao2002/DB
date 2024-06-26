@@ -2,10 +2,12 @@ import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import "./Contact.css"
 import Navbar from "../Navbar/Navbar"
+import DocumentTitle from '../DocumentTitle/DocumentTitle'
 
 
 
 const Contact = () => {
+    DocumentTitle('DB | Contact')
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission logic here

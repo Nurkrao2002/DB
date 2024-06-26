@@ -1,8 +1,10 @@
 import React from 'react'
 import "./Queries.css"
 import Navbar from "../Navbar/Navbar"
+import DocumentTitle from '../DocumentTitle/DocumentTitle'
 
 const Queries = () => {
+  DocumentTitle('DB | Queries')
   return (
     <>
     <Navbar />
@@ -14,3 +16,6 @@ const Queries = () => {
   )
 }
 export default Queries
+
+
+

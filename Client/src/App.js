@@ -6,6 +6,7 @@ import About from "./Components/About/About";
 import Services from "./Components/Services/Services";
 import Queries from "./Components/Queries/Queries";
 import Contact from './Components/Contact/Contact';
+import DBList from './Components/DBList/DBList';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path:"contact",
     element:<Contact />
+  },
+  {
+    path:"DBList",
+    element:<DBList />
   }
 ])
 

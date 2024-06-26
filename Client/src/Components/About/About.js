@@ -1,11 +1,15 @@
 import React from 'react'
 import "./About.css"
 import Navbar from "../Navbar/Navbar"
+import DocumentTitle from '../DocumentTitle/DocumentTitle'
+
 import img1 from "../../Images/img1.jpg"
 
 
 
+
 const About = () => {
+  DocumentTitle('DB | About')
   return (
     <>
     <Navbar />

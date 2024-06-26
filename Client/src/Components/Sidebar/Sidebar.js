@@ -1,12 +1,14 @@
 import React from 'react';
 import "./Sidebar.css";
 
+
+
 const Sidebar = () => {
     return (
         <div className="sidebar text-white">
             <ul className="list-unstyled">
                 <li className="nav-link">
-                    <a href="#services">
+                    <a href="/DBList">
                         <i className='bx bxs-server icon'></i>
                         <span className="text nav-text">DB's List</span>
                     </a>
