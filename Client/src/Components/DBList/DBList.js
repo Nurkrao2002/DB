@@ -1,17 +1,56 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./DBList.css"
 import Navbar from "../Navbar/Navbar"
 import DocumentTitle from '../DocumentTitle/DocumentTitle'
+// import Axios from 'axios'
+import axios from 'axios'
+// import { response } from 'express'
 
 
 
 const DBList = () => {
+  const [data,setData] = useState([])
+  useEffect(()=>{
+    collectionsfunction()
+  })
+  const collectionsfunction = async () => {
+    try {
+      await axios.get("http://localhost:1000/dev/v1/collections").then (response=>{
+        const collections = response.data
+        setData(collections.data)
+      }).catch(error=>{
+        console.error("Errror",error)
+      })
+    } catch (error) {
+      console.log("error",error)
+    }
+  }
+  const getColorClass = (index) => {
+    const colorClasses = ['color-1', 'color-2', 'color-3', 'color-4', 'color-5'];
+    return colorClasses[index % colorClasses.length];
+  };
+  
     DocumentTitle('DB | Lists | Offline')
   return (
     <>
     <Navbar />
-    <h1>Uday</h1>
-
+    {/* <div>
+        {data.length > 0 ? data.map((item, index) => <div key={index}>{item}</div>) : <div>No Collections Available</div>}
+      </div> */}
+    {/* <div>
+      {data[0]}
+    </div> */}
+     {/* <div className="containerr">
+        {data.length > 0 ? data.map((item, index) => (
+          <div key={index} className="collection-item">{item}</div>
+        )) : <div className="no-collections">No Collections Available</div>}
+      </div> */}
+      <div className="containerr">
+        {data.length > 0 ? data.map((item, index) => (
+          <div key={index} className={`collection-item ${getColorClass(index)}`}>{item}</div>
+        )) : <div className="no-collections">No Collections Available</div>}
+       
+      </div>
     </>
   )
 }
